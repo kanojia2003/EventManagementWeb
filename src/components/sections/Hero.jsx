@@ -1,8 +1,8 @@
-
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, fadeIn, staggerContainer } from '../../framer';
+
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -72,16 +72,26 @@ const Hero = () => {
           ></motion.div>
           <motion.h1 
             variants={fadeInUp}
-            className="text-5xl md:text-8xl font-serif font-bold text-gold mb-6 tracking-tight drop-shadow-lg" 
-            style={{textShadow: '0 2px 16px #000, 0 0 2px #D4AF37'}}
+            className="text-4xl md:text-6xl font-extrabold drop-shadow-lg flex flex-wrap justify-center items-center"
           >
-            SSBenchmark
+            <span
+              className="bg-gradient-to-r from-[#FFD700] via-[#FFC300] to-[#D4AF37] bg-clip-text text-transparent"
+              style={{
+                WebkitTextStroke: '2px white',
+                textStroke: '2px white',
+                textShadow: '0 2px 16px ' // only white outline, no gold glow
+              }}
+            >
+              SSBenchmark
+            </span>
             <motion.span 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.7 }}
-              className="block mt-2 md:mt-0 md:inline text-white text-4xl md:text-6xl font-light"
-            >   Events</motion.span>
+              className="block mt-2  md:mt-0 md:inline text-white text-4xl md:text-6xl font-light ml-2"
+            >
+              Events
+            </motion.span>
           </motion.h1>
           <motion.div 
             initial={{ width: 0 }}
@@ -108,23 +118,19 @@ const Hero = () => {
           variants={fadeInUp}
           className="flex flex-col sm:flex-row justify-center gap-6 mt-6 w-full"
         >
-          <motion.a
-            whileHover={{ scale: 1.1, boxShadow: '0 8px 40px #D4AF37' }}
-            whileTap={{ scale: 0.95 }}
-            href="#contact"
-            className="px-12 py-5 bg-gradient-to-r from-gold to-yellow-500 text-white font-bold rounded-full border-2 border-gold shadow-xl shadow-gold/30 hover:from-yellow-400 hover:to-gold hover:text-white transition-all duration-300 text-2xl"
-            style={{boxShadow: '0 4px 32px #D4AF37'}}
-          >
-            Book Now
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: 1.1, backgroundColor: 'rgba(0,0,0,0.3)', borderColor: '#D4AF37' }}
-            whileTap={{ scale: 0.95 }}
-            href="#contact"
-            className="px-12 py-5 bg-transparent text-white border-2 border-gold/50 font-bold rounded-full shadow-xl shadow-black/30 text-2xl"
-          >
-            Contact Us
-          </motion.a>
+              <Link
+                to="/contact"
+                className="px-12 py-5 bg-gradient-to-r from-gold to-yellow-500 text-white font-bold rounded-full border-2 border-gold shadow-xl shadow-gold/30 hover:from-yellow-400 hover:to-gold hover:text-white transition-all duration-300 text-2xl"
+                style={{boxShadow: '0 4px 32px #D4AF37'}}
+              >
+                Book Now
+              </Link>
+              <Link
+                to="/contact"
+                className="px-12 py-5 bg-transparent text-white border-2 border-gold/50 font-bold rounded-full shadow-xl shadow-black/30 text-2xl"
+              >
+                Contact Us
+              </Link>
         </motion.div>
       </motion.div>
     </section>

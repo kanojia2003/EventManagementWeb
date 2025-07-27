@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Wedding Planning",
+    "description": "Comprehensive wedding planning and management services.",
+    "icon": "wedding"
+  },
+  {
+    "title": "Corporate Events",
+    "description": "Professional organization for corporate events and seminars.",
+    "icon": "corporate"
+  },
+  {
+    "title": "Concerts",
+    "description": "End-to-end concert management and logistics.",
+    "icon": "concert"
+  }
+]

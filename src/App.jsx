@@ -1,30 +1,40 @@
-import React from 'react';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  useLocation,
+  Routes,
+  Route,
+} from "react-router-dom";
+import HomeRoute from "./routes/HomeRoute";
+import AboutRoute from "./routes/AboutRoute";
+import ServicesRoute from "./routes/ServicesRoute";
+import GalleryRoute from "./routes/GalleryRoute";
+import GalleryCategoryRoute from "./routes/GalleryCategoryRoute";
+import TestimonialsRoute from "./routes/TestimonialsRoute";
+import ContactRoute from "./routes/ContactRoute";
+import { AnimatePresence } from "framer-motion";
 
-// Layout Components
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
-
-// Section Components
-import Hero from './components/sections/Hero';
-import About from './components/sections/About';
-import Services from './components/sections/Services';
-import Gallery from './components/sections/Gallery';
-import Testimonials from './components/sections/Testimonials';
-import Contact from './components/sections/Contact';
+function AppWrapper() {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<HomeRoute />} />
+        <Route path="/about" element={<AboutRoute />} />
+        <Route path="/services" element={<ServicesRoute />} />
+        <Route path="/gallery" element={<GalleryRoute />} />
+        <Route path="/gallery/:category" element={<GalleryCategoryRoute />} />
+        <Route path="/testimonials" element={<TestimonialsRoute />} />
+        <Route path="/contact" element={<ContactRoute />} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Gallery />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <AppWrapper />
+    </Router>
   );
 }
 

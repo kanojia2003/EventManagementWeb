@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { fadeInUp, fadeIn, staggerContainer } from '../../framer';
 
 const Footer = () => {
@@ -36,19 +37,23 @@ const Footer = () => {
           <motion.p 
             className="text-gray-400 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
             Transforming your vision into extraordinary experiences with elegance and precision.
           </motion.p>
         </motion.div>
-
-        {/* Social Icons */}
         <motion.div 
           className="flex justify-center gap-6 mb-8 text-xl text-gray-400"
           variants={fadeInUp}
         >
+          <motion.a 
+            href="https://www.instagram.com/ss_benchmark_events_?utm_source=qr&igsh=MTg0Nzk2Y2RjY2RrNQ==" 
+            whileHover={{ scale: 1.2, color: "#D4AF37" }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <FaInstagram />
+          </motion.a>
           <motion.a 
             href="https://facebook.com" 
             target="_blank" 
@@ -59,16 +64,7 @@ const Footer = () => {
           >
             <FaFacebook />
           </motion.a>
-          <motion.a 
-            href="https://instagram.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            whileHover={{ scale: 1.2, color: "#D4AF37" }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            <FaInstagram />
-          </motion.a>
+         
           <motion.a 
             href="https://twitter.com" 
             target="_blank" 
@@ -96,41 +92,31 @@ const Footer = () => {
           className="hidden md:flex justify-center flex-wrap gap-6 mb-8 text-gray-400 text-sm font-medium"
           variants={fadeInUp}
         >
-          <motion.a 
-            href="#about" 
-            whileHover={{ scale: 1.1, color: "#D4AF37" }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            About Us
-          </motion.a>
-          <motion.a 
-            href="#services" 
-            whileHover={{ scale: 1.1, color: "#D4AF37" }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Services
-          </motion.a>
-          <motion.a 
-            href="#gallery" 
-            whileHover={{ scale: 1.1, color: "#D4AF37" }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Gallery
-          </motion.a>
-          <motion.a 
-            href="#testimonials" 
-            whileHover={{ scale: 1.1, color: "#D4AF37" }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Testimonials
-          </motion.a>
-          <motion.a 
-            href="#contact" 
-            whileHover={{ scale: 1.1, color: "#D4AF37" }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Contact
-          </motion.a>
+          <Link to="/about">
+            <motion.span whileHover={{ scale: 1.1, color: "#D4AF37" }} transition={{ type: "spring", stiffness: 300 }}>
+              About Us
+            </motion.span>
+          </Link>
+          <Link to="/services">
+            <motion.span whileHover={{ scale: 1.1, color: "#D4AF37" }} transition={{ type: "spring", stiffness: 300 }}>
+              Services
+            </motion.span>
+          </Link>
+          <Link to="/gallery">
+            <motion.span whileHover={{ scale: 1.1, color: "#D4AF37" }} transition={{ type: "spring", stiffness: 300 }}>
+              Gallery
+            </motion.span>
+          </Link>
+          <Link to="/testimonials">
+            <motion.span whileHover={{ scale: 1.1, color: "#D4AF37" }} transition={{ type: "spring", stiffness: 300 }}>
+              Testimonials
+            </motion.span>
+          </Link>
+          <Link to="/contact">
+            <motion.span whileHover={{ scale: 1.1, color: "#D4AF37" }} transition={{ type: "spring", stiffness: 300 }}>
+              Contact
+            </motion.span>
+          </Link>
         </motion.div>
 
         {/* Contact Info */}

@@ -57,7 +57,7 @@ const Services = () => {
   return (
     <motion.section 
       id="services" 
-      className="py-20 bg-gray-50"
+      className="py-20 bg-gradient-to-br from-white via-gold/10 to-gold/30 mt-10"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.1 }}

@@ -1,73 +1,73 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, fadeIn, staggerContainer, scaleIn } from '../../framer';
+import galleryData from '../../data/gallery.json';
 
-const GalleryItem = ({ category, className, index }) => {
-  // Example image mapping by category
-  const images = {
-    weddings: '/src/assets/images/wedding1.avif',
-    concerts: '/src/assets/images/concert1.avif',
-    corporate: '/src/assets/images/corporate1.avif',
-  };
-  return (
+const GalleryItem = ({ image, category, index }) => (
+  <motion.div 
+    className="overflow-hidden rounded-2xl shadow-2xl border border-gold/30 backdrop-blur-lg bg-white/80 transition-all duration-300 hover:shadow-gold/30 hover:border-gold/60"
+    variants={fadeInUp}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: false, amount: 0.25 }}
+    transition={{ delay: index * 0.1 }}
+  >
     <motion.div 
-      className={`overflow-hidden rounded-lg shadow-lg ${className}`}
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      transition={{ delay: index * 0.1 }}
+      className="relative group"
+      whileHover={{ scale: 1.04 }}
+      transition={{ type: "spring", stiffness: 300 }}
     >
+      <motion.img
+        src={image}
+        alt={`${category} event`}
+        className="w-full aspect-square object-cover"
+        loading="lazy"
+        initial={{ filter: "grayscale(0.5)" }}
+        whileHover={{ filter: "grayscale(0)" }}
+        transition={{ duration: 0.3 }}
+      />
       <motion.div 
-        className="relative group"
-        whileHover={{ scale: 1.03 }}
-        transition={{ type: "spring", stiffness: 300 }}
+        className="absolute inset-0 bg-gradient-to-br from-black/60 via-gold/10 to-gold/30 flex items-center justify-center"
+        initial={{ opacity: 0 }}
+        whileHover={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
       >
-        <motion.img
-          src={images[category] || images['weddings']}
-          alt={`${category.charAt(0).toUpperCase() + category.slice(1)} event`}
-          className="w-full aspect-square object-cover"
-          loading="lazy"
-          initial={{ filter: "grayscale(0.5)" }}
-          whileHover={{ filter: "grayscale(0)" }}
-          transition={{ duration: 0.3 }}
-        />
-        <motion.div 
-          className="absolute inset-0 bg-black/50 flex items-center justify-center"
-          initial={{ opacity: 0 }}
-          whileHover={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+        <motion.button 
+          className="px-4 py-2 bg-gold text-black font-bold rounded-full shadow-lg"
+          initial={{ scale: 0 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          whileInView={{ scale: 1 }}
+          transition={{ 
+            type: "spring", 
+            stiffness: 400, 
+            damping: 10,
+            delay: 0.1 
+          }}
         >
-          <motion.button 
-            className="px-4 py-2 bg-gold text-black font-bold rounded-full"
-            initial={{ scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            whileInView={{ scale: 1 }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 400, 
-              damping: 10,
-              delay: 0.1 
-            }}
-          >
-            View Details
-          </motion.button>
-        </motion.div>
+          View Details
+        </motion.button>
       </motion.div>
+      <span className="absolute top-3 left-3 bg-gold/80 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">{category}</span>
     </motion.div>
-  );
-};
+  </motion.div>
+);
 
 const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  // Get all categories from galleryData
+  const categories = ['All', ...galleryData.map(item => item.category)];
+  const [activeCategory, setActiveCategory] = useState('All');
 
-  const categories = ['all', 'weddings', 'concerts', 'corporate'];
+  // Get images to display based on activeCategory
+  const imagesToShow = activeCategory === 'All'
+    ? galleryData.flatMap(item => item.images.map(img => ({ image: img, category: item.category })))
+    : galleryData.filter(item => item.category === activeCategory)
+        .flatMap(item => item.images.map(img => ({ image: img, category: item.category })));
 
   return (
     <motion.section 
       id="gallery" 
-      className="py-20 bg-white"
+      className="py-20 bg-gradient-to-br from-white via-gold/10 to-gold/30 mt-10"
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
@@ -75,12 +75,15 @@ const Gallery = () => {
     >
       <div className="container mx-auto px-4">
         <motion.h2 
-          className="text-3xl md:text-4xl font-serif font-bold text-center mb-12"
+          className="text-4xl md:text-5xl font-serif font-bold text-center mb-16 text-black drop-shadow-lg"
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
         >
+          <span className="inline-block align-middle mr-2">
+            <svg className="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.71 1.61 5.5 4.09C13.79 4.61 15.96 3 18.5 3 21.58 3 24 5.42 24 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </span>
           Gallery
         </motion.h2>
 
@@ -96,36 +99,33 @@ const Gallery = () => {
             <motion.button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium ${activeCategory === category ? 'bg-black text-white' : 'bg-gray-200 text-gray-800'}`}
+              className={`px-6 py-2 rounded-full font-medium shadow-md transition-all duration-300 ${activeCategory === category ? 'bg-gold text-black border border-gold/80' : 'bg-white/80 text-gray-800 border border-gray-200'}`}
               whileHover={{ 
-                scale: 1.05, 
-                backgroundColor: activeCategory === category ? '#000000' : '#e5e7eb',
+                scale: 1.08, 
+                backgroundColor: activeCategory === category ? '#D4AF37' : '#fffbe6',
+                color: activeCategory === category ? '#000' : '#D4AF37',
               }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17, delay: index * 0.1 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              {category}
             </motion.button>
           ))}
         </motion.div>
 
         {/* Gallery Grid */}
         <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
         >
-          <GalleryItem category="weddings" className={activeCategory !== 'all' && activeCategory !== 'weddings' ? 'hidden' : ''} index={0} />
-          <GalleryItem category="concerts" className={activeCategory !== 'all' && activeCategory !== 'concerts' ? 'hidden' : ''} index={1} />
-          <GalleryItem category="corporate" className={activeCategory !== 'all' && activeCategory !== 'corporate' ? 'hidden' : ''} index={2} />
-
-          <GalleryItem category="weddings" className={activeCategory !== 'all' && activeCategory !== 'weddings' ? 'hidden' : ''} index={3} />
-          <GalleryItem category="concerts" className={activeCategory !== 'all' && activeCategory !== 'concerts' ? 'hidden' : ''} index={4} />
-          <GalleryItem category="corporate" className={activeCategory !== 'all' && activeCategory !== 'corporate' ? 'hidden' : ''} index={5} />
+          {imagesToShow.map((imgObj, idx) => (
+            <GalleryItem key={idx} image={imgObj.image} category={imgObj.category} index={idx} />
+          ))}
         </motion.div>
 
         {/* Video Section */}
@@ -137,7 +137,7 @@ const Gallery = () => {
           viewport={{ once: false, amount: 0.25 }}
         >
           <motion.h3 
-            className="text-2xl font-bold text-center mb-8"
+            className="text-2xl font-bold text-center mb-8 text-gold"
             variants={fadeInUp}
             initial="hidden"
             whileInView="show"
@@ -146,7 +146,7 @@ const Gallery = () => {
             Event Highlights
           </motion.h3>
           <motion.div 
-            className="max-w-4xl mx-auto bg-gray-200 aspect-video rounded-lg flex items-center justify-center"
+            className="max-w-4xl mx-auto bg-white/80 border border-gold/30 aspect-video rounded-2xl flex items-center justify-center shadow-lg backdrop-blur-lg"
             variants={scaleIn}
             initial="hidden"
             whileInView="show"
@@ -155,7 +155,7 @@ const Gallery = () => {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <motion.svg 
-              className="w-16 h-16 text-gray-500" 
+              className="w-16 h-16 text-gold" 
               fill="currentColor" 
               viewBox="0 0 20 20" 
               xmlns="http://www.w3.org/2000/svg"
