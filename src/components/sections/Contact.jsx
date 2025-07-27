@@ -108,7 +108,13 @@ const Contact = () => {
             }}
             transition={{ type: "spring", stiffness: 300, damping: 15 }}
           >
-            <form onSubmit={handleSubmit} noValidate aria-label="Contact form">
+            <form 
+              action="https://formspree.io/f/xnnzvqqo" 
+              method="POST"
+              onSubmit={handleSubmit} 
+              noValidate 
+              aria-label="Contact form"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label
@@ -120,6 +126,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     className={`w-full px-4 py-2 border ${
                       errors.name ? "border-red-500" : "border-gray-300"
                     } rounded-lg focus:outline-none focus:ring-2 focus:ring-gold`}
@@ -149,6 +156,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     className={`w-full px-4 py-2 border ${
                       errors.email ? "border-red-500" : "border-gray-300"
                     } rounded-lg focus:outline-none focus:ring-2 focus:ring-gold`}
@@ -180,6 +188,7 @@ const Contact = () => {
                   <input
                     type="tel"
                     id="phone"
+                    name="phone"
                     className={`w-full px-4 py-2 border ${
                       errors.phone ? "border-red-500" : "border-gray-300"
                     } rounded-lg focus:outline-none focus:ring-2 focus:ring-gold`}
@@ -208,6 +217,7 @@ const Contact = () => {
                   </label>
                   <select
                     id="eventType"
+                    name="eventType"
                     className={`w-full px-4 py-2 border ${
                       errors.eventType ? "border-red-500" : "border-gray-300"
                     } rounded-lg focus:outline-none focus:ring-2 focus:ring-gold`}
@@ -245,6 +255,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={5}
                   className={`w-full px-4 py-2 border ${
                     errors.message ? "border-red-500" : "border-gray-300"
