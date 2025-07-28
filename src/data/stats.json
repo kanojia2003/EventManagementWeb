@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "number": "500+",
+    "label": "Events Organized",
+    "icon": "calendar",
+    "description": "Successfully planned and executed events"
+  },
+  {
+    "id": 2,
+    "number": "50+",
+    "label": "Happy Clients",
+    "icon": "users",
+    "description": "Satisfied customers across various industries"
+  },
+  {
+    "id": 3,
+    "number": "5+",
+    "label": "Years Experience",
+    "icon": "award",
+    "description": "Proven expertise in event management"
+  },
+  {
+    "id": 4,
+    "number": "24/7",
+    "label": "Support Available",
+    "icon": "clock",
+    "description": "Round-the-clock assistance for your events"
+  }
+]

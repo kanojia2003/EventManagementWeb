@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/images/weddings/1.jpg",
+    "title": "Dream Weddings",
+    "subtitle": "Creating magical moments that last forever",
+    "description": "From intimate ceremonies to grand celebrations, we make your special day unforgettable"
+  },
+  {
+    "id": 2,
+    "image": "/assets/images/corporate/1.jpeg",
+    "title": "Corporate Excellence",
+    "subtitle": "Professional events that inspire success",
+    "description": "Elevate your business with our sophisticated corporate event solutions"
+  },
+  {
+    "id": 3,
+    "image": "/assets/images/themedparty/1.jpeg",
+    "title": "Themed Celebrations",
+    "subtitle": "Bringing your creative visions to life",
+    "description": "Transform any occasion into an extraordinary themed experience"
+  },
+  {
+    "id": 4,
+    "image": "/assets/images/venubookiing/1.jpeg",
+    "title": "Perfect Venues",
+    "subtitle": "The ideal setting for every occasion",
+    "description": "Discover stunning venues that complement your event perfectly"
+  },
+  {
+    "id": 5,
+    "image": "/assets/images/tourtravels/1.jpeg",
+    "title": "Travel Experiences",
+    "subtitle": "Adventures beyond imagination",
+    "description": "Create lasting memories with our curated travel and tour packages"
+  }
+]

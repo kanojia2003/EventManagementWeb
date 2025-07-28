@@ -61,7 +61,7 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="hidden md:flex gap-10 text-gray-700 font-bold text-2xl"
+          className={`hidden md:flex gap-10 font-bold text-2xl ${isSticky ? 'text-gray-700' : 'text-white'}`}
         >
           {NAV_LINKS.map((item, index) => (
             <motion.li 
@@ -91,7 +91,7 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3, delay: 0.5 }}
           whileTap={{ scale: 0.9 }}
-          className="md:hidden flex items-center justify-center text-gray-800 text-3xl focus:outline-none"
+          className={`md:hidden flex items-center justify-center text-3xl focus:outline-none ${isSticky ? 'text-gray-800' : 'text-white'}`}
           aria-label="Open menu"
           onClick={() => setMenuOpen(true)}
         >

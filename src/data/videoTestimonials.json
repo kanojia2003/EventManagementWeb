@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "name": "Rajesh & Priya Sharma",
+    "event": "Dream Wedding Celebration",
+    "category": "Wedding",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "thumbnail": "/assets/images/weddings/1.jpg",
+    "duration": "2:45",
+    "rating": 5,
+    "date": "2024-10-15",
+    "location": "Royal Palace Banquet, Delhi",
+    "quote": "SS Benchmark Events made our wedding day absolutely magical. Every detail was perfect!",
+    "highlights": [
+      "Perfect venue decoration",
+      "Seamless event coordination",
+      "Exceptional food quality",
+      "Professional photography"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Neha Patel",
+    "event": "25th Anniversary Celebration",
+    "category": "Anniversary",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "thumbnail": "/assets/images/weddings/5.jpg",
+    "duration": "1:58",
+    "rating": 5,
+    "date": "2024-09-20",
+    "location": "Garden Vista, Mumbai",
+    "quote": "The team understood our vision perfectly and delivered beyond our expectations.",
+    "highlights": [
+      "Creative theme design",
+      "Timely execution",
+      "Guest management",
+      "Memorable entertainment"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Corporate Client - Tech Solutions Ltd",
+    "event": "Annual Conference 2024",
+    "category": "Corporate",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "thumbnail": "/assets/images/corporate/1.jpeg",
+    "duration": "3:12",
+    "rating": 5,
+    "date": "2024-08-10",
+    "location": "Convention Center, Bangalore",
+    "quote": "Professional service with excellent attention to detail. Our conference was a huge success!",
+    "highlights": [
+      "State-of-the-art AV setup",
+      "Professional coordination",
+      "Networking facilitation",
+      "Brand positioning"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Amit Kumar",
+    "event": "Bollywood Theme Party",
+    "category": "Themed Party",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "thumbnail": "/assets/images/themedparty/1.jpeg",
+    "duration": "2:20",
+    "rating": 4,
+    "date": "2024-07-25",
+    "location": "Star Lounge, Pune",
+    "quote": "Amazing creativity and execution! The Bollywood theme came alive beautifully.",
+    "highlights": [
+      "Authentic theme decoration",
+      "Professional dancers",
+      "Interactive entertainment",
+      "Vibrant atmosphere"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Sunita Reddy",
+    "event": "Engagement Ceremony",
+    "category": "Engagement",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "thumbnail": "/assets/images/weddings/8.jpg",
+    "duration": "1:45",
+    "rating": 5,
+    "date": "2024-11-02",
+    "location": "Heritage Palace, Jaipur",
+    "quote": "Beautifully organized engagement with traditional touch. Highly recommended!",
+    "highlights": [
+      "Traditional decor elements",
+      "Cultural entertainment",
+      "Photography excellence",
+      "Guest satisfaction"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Vikram Industries",
+    "event": "Product Launch Event",
+    "category": "Corporate",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "thumbnail": "/assets/images/corporate/2.jpeg",
+    "duration": "2:55",
+    "rating": 5,
+    "date": "2024-06-18",
+    "location": "Tech Hub, Hyderabad",
+    "quote": "Our product launch was executed flawlessly. Great team with innovative ideas!",
+    "highlights": [
+      "Product showcase setup",
+      "Media coordination",
+      "Live streaming",
+      "Social media coverage"
+    ]
+  }
+]

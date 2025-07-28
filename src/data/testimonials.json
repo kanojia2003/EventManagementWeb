@@ -1,52 +1,134 @@
 [
   {
-    "name": "Senjiv Mehra",
-    "text": "SS Benchmark Events made our wedding unforgettable! Highly recommended.",
-    "rating": 5
+    "id": 1,
+    "name": "Sanjiv Mehra",
+    "text": "SS Benchmark Events made our wedding unforgettable! From the initial planning to the final execution, every detail was handled with utmost care. The team's creativity and professionalism exceeded our expectations.",
+    "rating": 5,
+    "event": "Wedding Celebration",
+    "location": "Varanasi",
+    "date": "2024-12-10",
+    "image": "/assets/images/weddings/6.jpg",
+    "category": "Wedding"
   },
   {
+    "id": 2,
     "name": "Rajiv Verma",
-    "text": "Professional and creative team. Our corporate event was a huge success.",
-    "rating": 4
+    "text": "Professional and creative team. Our corporate event was a huge success. The attention to detail and seamless coordination made our annual summit memorable for all attendees.",
+    "rating": 5,
+    "event": "Corporate Annual Summit",
+    "location": "Delhi",
+    "date": "2024-11-15",
+    "image": "/assets/images/corporate/3.jpeg",
+    "category": "Corporate"
   },
   {
+    "id": 3,
     "name": "Amit Sharma",
-    "text": "SS Benchmark Events made our wedding truly magical. Every detail was perfect!",
-    "rating": 5
+    "text": "SS Benchmark Events made our wedding truly magical. Every detail was perfect! The decoration, catering, and entertainment were beyond our dreams. Highly recommended!",
+    "rating": 5,
+    "event": "Traditional Wedding",
+    "location": "Agra",
+    "date": "2024-10-20",
+    "image": "/assets/images/weddings/8.jpg",
+    "category": "Wedding"
   },
   {
+    "id": 4,
     "name": "Priya Verma",
-    "text": "Our corporate event was seamless and impressive. The team is very professional.",
-    "rating": 3
+    "text": "Our corporate event was seamless and impressive. The team is very professional and handled all logistics perfectly. Our clients were thoroughly impressed with the arrangements.",
+    "rating": 4,
+    "event": "Product Launch Event",
+    "location": "Mumbai",
+    "date": "2024-09-30",
+    "image": "/assets/images/corporate/4.jpeg",
+    "category": "Corporate"
   },
   {
+    "id": 5,
     "name": "Rahul Singh",
-    "text": "The birthday party for my son was a hit! Kids and parents loved the arrangements.",
-    "rating": 4
+    "text": "The birthday party for my son was a hit! Kids and parents loved the arrangements. The themed decorations and entertainment were absolutely fantastic.",
+    "rating": 5,
+    "event": "Superhero Birthday Party",
+    "location": "Varanasi",
+    "date": "2024-08-25",
+    "image": "/assets/images/themedparty/3.jpeg",
+    "category": "Themed Party"
   },
   {
+    "id": 6,
     "name": "Neha Patel",
-    "text": "Creative ideas and flawless execution. Highly recommend for any event.",
-    "rating": 5
+    "text": "Creative ideas and flawless execution. Highly recommend for any event. The team's innovative approach and attention to detail made our anniversary celebration truly special.",
+    "rating": 5,
+    "event": "25th Anniversary Celebration",
+    "location": "Jaipur",
+    "date": "2024-07-15",
+    "image": "/assets/images/venubookiing/5.jpeg",
+    "category": "Anniversary"
   },
   {
+    "id": 7,
     "name": "Vikram Joshi",
-    "text": "Our anniversary celebration was elegant and memorable. Thank you SS Benchmark Events!",
-    "rating": 4
+    "text": "Our anniversary celebration was elegant and memorable. Thank you SS Benchmark Events! The romantic setup and personalized touches made it a night to remember.",
+    "rating": 4,
+    "event": "10th Anniversary Dinner",
+    "location": "Udaipur",
+    "date": "2024-06-20",
+    "image": "/assets/images/honeymoonpackages/3.jpeg",
+    "category": "Anniversary"
   },
   {
+    "id": 8,
     "name": "Sneha Agarwal",
-    "text": "The team handled everything with care and attention. Our engagement was beautiful.",
-    "rating": 3
+    "text": "The team handled everything with care and attention. Our engagement was beautiful. The floral arrangements and lighting created the perfect romantic ambiance.",
+    "rating": 4,
+    "event": "Engagement Ceremony",
+    "location": "Lucknow",
+    "date": "2024-05-10",
+    "image": "/assets/images/weddings/12.jpg",
+    "category": "Engagement"
   },
   {
+    "id": 9,
     "name": "Rohit Mehra",
-    "text": "From decor to food, everything was top-notch. Will book again for future events.",
-    "rating": 5
+    "text": "From decor to food, everything was top-notch. Will book again for future events. The quality of service and creative execution was beyond our expectations.",
+    "rating": 5,
+    "event": "Corporate Gala Dinner",
+    "location": "Bangalore",
+    "date": "2024-04-18",
+    "image": "/assets/images/corporate/5.jpeg",
+    "category": "Corporate"
   },
   {
+    "id": 10,
     "name": "Kavita Desai",
-    "text": "SS Benchmark Events exceeded our expectations. Guests were delighted!",
-    "rating": 4
+    "text": "SS Benchmark Events exceeded our expectations. Guests were delighted! The innovative theme and seamless organization made our event talk of the town.",
+    "rating": 5,
+    "event": "Housewarming Party",
+    "location": "Pune",
+    "date": "2024-03-22",
+    "image": "/assets/images/themedparty/1.jpeg",
+    "category": "Celebration"
+  },
+  {
+    "id": 11,
+    "name": "Ankit Gupta",
+    "text": "Professional team with excellent coordination skills. Our conference was executed flawlessly with perfect timing and logistics management.",
+    "rating": 5,
+    "event": "Tech Conference 2024",
+    "location": "Hyderabad",
+    "date": "2024-02-14",
+    "image": "/assets/images/corporate/6.jpeg",
+    "category": "Corporate"
+  },
+  {
+    "id": 12,
+    "name": "Riya Malhotra",
+    "text": "The destination wedding planning was exceptional. Every detail from travel arrangements to venue decoration was perfectly coordinated.",
+    "rating": 5,
+    "event": "Destination Wedding",
+    "location": "Goa",
+    "date": "2024-01-20",
+    "image": "/assets/images/honeymoonpackages/1.jpeg",
+    "category": "Wedding"
   }
 ]

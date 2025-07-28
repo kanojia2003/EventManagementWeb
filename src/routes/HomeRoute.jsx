@@ -2,8 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/layout/Navbar";
 import Hero from "../components/sections/Hero";
-import About from "../components/sections/About";
+import Statistics from "../components/sections/Statistics";
 import Services from "../components/sections/Services";
+import FeaturedEvents from "../components/sections/FeaturedEvents";
+import InfiniteScrollTestimonials from "../components/sections/InfiniteScrollTestimonials";
 import Footer from "../components/layout/Footer";
 
 const HomeRoute = () => (
@@ -15,8 +17,14 @@ const HomeRoute = () => (
   >
     <Navbar />
     <Hero />
-    <About />
-    <Services />
+    <Statistics />
+    <Services 
+      showHeader={true}
+      headerTitle="Our Premium Services"
+      headerDescription="Discover our comprehensive range of event management services. From intimate gatherings to grand celebrations, we make every moment special."
+    />
+    <FeaturedEvents />
+    <InfiniteScrollTestimonials />
     <Footer />
   </motion.div>
 );

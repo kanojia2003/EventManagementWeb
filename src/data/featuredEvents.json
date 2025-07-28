@@ -1,0 +1,131 @@
+[
+  {
+    "id": 1,
+    "title": "Royal Wedding Celebration",
+    "category": "Wedding",
+    "date": "2024-12-15",
+    "location": "Palace Garden, Varanasi",
+    "description": "A grand traditional wedding celebration with over 500 guests, featuring magnificent decorations and cultural performances.",
+    "image": "/assets/images/weddings/1.jpg",
+    "gallery": [
+      "/assets/images/weddings/1.jpg",
+      "/assets/images/weddings/2.jpg",
+      "/assets/images/weddings/4.jpg",
+      "/assets/images/weddings/5.jpg"
+    ],
+    "highlights": [
+      "Traditional Mandap Setup",
+      "Live Cultural Performances",
+      "Premium Catering for 500+",
+      "Professional Photography"
+    ],
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Corporate Annual Summit 2024",
+    "category": "Corporate",
+    "date": "2024-11-20",
+    "location": "Grand Hotel Convention Center",
+    "description": "A professional corporate summit bringing together industry leaders with keynote speakers and networking sessions.",
+    "image": "/assets/images/corporate/2.jpeg",
+    "gallery": [
+      "/assets/images/corporate/1.jpeg",
+      "/assets/images/corporate/2.jpeg",
+      "/assets/images/corporate/3.jpeg",
+      "/assets/images/corporate/4.jpeg"
+    ],
+    "highlights": [
+      "International Keynote Speakers",
+      "High-tech AV Setup",
+      "Networking Lunch",
+      "Award Ceremony"
+    ],
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Bollywood Theme Birthday Bash",
+    "category": "Themed Party",
+    "date": "2024-10-30",
+    "location": "Riverside Garden Resort",
+    "description": "An extravagant Bollywood-themed birthday celebration with live DJ, dance performances, and themed decorations.",
+    "image": "/assets/images/themedparty/2.jpeg",
+    "gallery": [
+      "/assets/images/themedparty/1.jpeg",
+      "/assets/images/themedparty/2.jpeg",
+      "/assets/images/themedparty/3.jpeg"
+    ],
+    "highlights": [
+      "Bollywood Theme Decoration",
+      "Live DJ & Dance Floor",
+      "Costume Contest",
+      "Photo Booth with Props"
+    ],
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Luxury Venue Launch Event",
+    "category": "Venue Booking",
+    "date": "2024-09-25",
+    "location": "Skyline Banquet Hall",
+    "description": "Grand opening event for a premium venue with celebrity guests, media coverage, and elegant arrangements.",
+    "image": "/assets/images/venubookiing/3.jpeg",
+    "gallery": [
+      "/assets/images/venubookiing/1.jpeg",
+      "/assets/images/venubookiing/2.jpeg",
+      "/assets/images/venubookiing/3.jpeg",
+      "/assets/images/venubookiing/4.jpeg"
+    ],
+    "highlights": [
+      "Celebrity Guest Appearances",
+      "Media Coverage",
+      "Luxury Catering",
+      "Red Carpet Entry"
+    ],
+    "featured": true
+  },
+  {
+    "id": 5,
+    "title": "Rajasthan Heritage Tour",
+    "category": "Tour & Travel",
+    "date": "2024-08-15",
+    "location": "Rajasthan, India",
+    "description": "A culturally rich heritage tour covering royal palaces, local markets, and traditional experiences.",
+    "image": "/assets/images/tourtravels/2.jpeg",
+    "gallery": [
+      "/assets/images/tourtravels/1.jpeg",
+      "/assets/images/tourtravels/2.jpeg",
+      "/assets/images/tourtravels/3.jpeg"
+    ],
+    "highlights": [
+      "Palace & Fort Visits",
+      "Local Cultural Experiences",
+      "Traditional Cuisine Tasting",
+      "Desert Safari Adventure"
+    ],
+    "featured": true
+  },
+  {
+    "id": 6,
+    "title": "Romantic Honeymoon Getaway",
+    "category": "Honeymoon",
+    "date": "2024-07-10",
+    "location": "Goa Beach Resort",
+    "description": "A perfect romantic honeymoon package with beachside accommodation, candlelight dinners, and couple activities.",
+    "image": "/assets/images/honeymoonpackages/2.jpeg",
+    "gallery": [
+      "/assets/images/honeymoonpackages/1.jpeg",
+      "/assets/images/honeymoonpackages/2.jpeg",
+      "/assets/images/honeymoonpackages/3.jpeg"
+    ],
+    "highlights": [
+      "Beachside Accommodation",
+      "Candlelight Dinner",
+      "Couples Spa Session",
+      "Sunset Cruise"
+    ],
+    "featured": true
+  }
+]

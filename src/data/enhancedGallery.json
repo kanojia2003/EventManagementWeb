@@ -1,0 +1,443 @@
+[
+  {
+    "category": "Weddings",
+    "description": "Elegant wedding ceremonies and receptions that create magical moments",
+    "featured": true,
+    "images": [
+      {
+        "src": "/assets/images/weddings/1.jpg",
+        "title": "Grand Wedding Ceremony",
+        "description": "A magnificent traditional wedding setup with golden decor",
+        "tags": [
+          "traditional",
+          "elegant",
+          "grand"
+        ],
+        "venue": "Royal Palace Banquet",
+        "date": "2024-10-15",
+        "guests": 500,
+        "type": "ceremony"
+      },
+      {
+        "src": "/assets/images/weddings/2.jpg",
+        "title": "Intimate Reception",
+        "description": "Beautiful intimate reception with floral arrangements",
+        "tags": [
+          "intimate",
+          "floral",
+          "romantic"
+        ],
+        "venue": "Garden Vista",
+        "date": "2024-09-20",
+        "guests": 150,
+        "type": "reception"
+      },
+      {
+        "src": "/assets/images/weddings/4.jpg",
+        "title": "Beach Wedding Setup",
+        "description": "Stunning beachside wedding with ocean views",
+        "tags": [
+          "beach",
+          "outdoor",
+          "sunset"
+        ],
+        "venue": "Sunset Beach Resort",
+        "date": "2024-11-05",
+        "guests": 200,
+        "type": "ceremony"
+      },
+      {
+        "src": "/assets/images/weddings/5.jpg",
+        "title": "Royal Palace Wedding",
+        "description": "Luxurious palace wedding with traditional decor",
+        "tags": [
+          "royal",
+          "luxury",
+          "traditional"
+        ],
+        "venue": "Heritage Palace",
+        "date": "2024-08-12",
+        "guests": 800,
+        "type": "ceremony"
+      },
+      {
+        "src": "/assets/images/weddings/6.jpg",
+        "title": "Garden Wedding Reception",
+        "description": "Enchanting garden reception under the stars",
+        "tags": [
+          "garden",
+          "evening",
+          "romantic"
+        ],
+        "venue": "Botanical Gardens",
+        "date": "2024-07-25",
+        "guests": 300,
+        "type": "reception"
+      },
+      {
+        "src": "/assets/images/weddings/7.jpg",
+        "title": "Modern Wedding Decor",
+        "description": "Contemporary wedding setup with modern aesthetics",
+        "tags": [
+          "modern",
+          "contemporary",
+          "chic"
+        ],
+        "venue": "Urban Loft",
+        "date": "2024-06-18",
+        "guests": 120,
+        "type": "reception"
+      }
+    ],
+    "stats": {
+      "totalEvents": 150,
+      "averageGuests": 350,
+      "satisfactionRate": 98
+    }
+  },
+  {
+    "category": "Corporate Events",
+    "description": "Professional corporate events and business celebrations",
+    "featured": false,
+    "images": [
+      {
+        "src": "/assets/images/corporate/1.jpeg",
+        "title": "Annual Conference",
+        "description": "Large-scale corporate conference with modern AV setup",
+        "tags": [
+          "conference",
+          "corporate",
+          "professional"
+        ],
+        "venue": "Convention Center",
+        "date": "2024-09-10",
+        "guests": 1000,
+        "type": "conference"
+      },
+      {
+        "src": "/assets/images/corporate/2.jpeg",
+        "title": "Product Launch Event",
+        "description": "Innovative product launch with interactive displays",
+        "tags": [
+          "launch",
+          "innovation",
+          "tech"
+        ],
+        "venue": "Tech Hub",
+        "date": "2024-10-02",
+        "guests": 300,
+        "type": "launch"
+      },
+      {
+        "src": "/assets/images/corporate/3.jpeg",
+        "title": "Awards Ceremony",
+        "description": "Elegant awards ceremony with stage lighting",
+        "tags": [
+          "awards",
+          "ceremony",
+          "elegant"
+        ],
+        "venue": "Grand Auditorium",
+        "date": "2024-11-20",
+        "guests": 500,
+        "type": "ceremony"
+      }
+    ],
+    "stats": {
+      "totalEvents": 85,
+      "averageGuests": 450,
+      "satisfactionRate": 96
+    }
+  },
+  {
+    "category": "Themed Party",
+    "description": "Creative themed parties with unique concepts and designs",
+    "featured": true,
+    "images": [
+      {
+        "src": "/assets/images/themedparty/1.jpeg",
+        "title": "Bollywood Night",
+        "description": "Vibrant Bollywood themed party with colorful decor",
+        "tags": [
+          "bollywood",
+          "colorful",
+          "entertainment"
+        ],
+        "venue": "Star Lounge",
+        "date": "2024-08-30",
+        "guests": 250,
+        "type": "theme-party"
+      },
+      {
+        "src": "/assets/images/themedparty/2.jpeg",
+        "title": "Retro 80s Party",
+        "description": "Nostalgic 80s themed celebration with neon lights",
+        "tags": [
+          "retro",
+          "80s",
+          "neon"
+        ],
+        "venue": "Retro Club",
+        "date": "2024-07-15",
+        "guests": 180,
+        "type": "theme-party"
+      },
+      {
+        "src": "/assets/images/themedparty/3.jpeg",
+        "title": "Masquerade Ball",
+        "description": "Elegant masquerade ball with mysterious ambiance",
+        "tags": [
+          "masquerade",
+          "elegant",
+          "mysterious"
+        ],
+        "venue": "Grand Ballroom",
+        "date": "2024-10-31",
+        "guests": 200,
+        "type": "theme-party"
+      }
+    ],
+    "stats": {
+      "totalEvents": 65,
+      "averageGuests": 210,
+      "satisfactionRate": 97
+    }
+  },
+  {
+    "category": "Venue Booking",
+    "description": "Premium venue spaces for all types of celebrations",
+    "featured": false,
+    "images": [
+      {
+        "src": "/assets/images/venubookiing/1.jpeg",
+        "title": "Luxury Banquet Hall",
+        "description": "Spacious banquet hall with crystal chandeliers",
+        "tags": [
+          "luxury",
+          "banquet",
+          "spacious"
+        ],
+        "venue": "Crystal Palace",
+        "capacity": 500,
+        "amenities": [
+          "AC",
+          "Parking",
+          "Catering"
+        ],
+        "type": "banquet"
+      },
+      {
+        "src": "/assets/images/venubookiing/2.jpeg",
+        "title": "Outdoor Garden Venue",
+        "description": "Beautiful garden venue perfect for outdoor events",
+        "tags": [
+          "garden",
+          "outdoor",
+          "natural"
+        ],
+        "venue": "Rose Garden",
+        "capacity": 300,
+        "amenities": [
+          "Garden",
+          "Gazebo",
+          "Lighting"
+        ],
+        "type": "garden"
+      },
+      {
+        "src": "/assets/images/venubookiing/3.jpeg",
+        "title": "Rooftop Event Space",
+        "description": "Modern rooftop venue with city skyline views",
+        "tags": [
+          "rooftop",
+          "modern",
+          "skyline"
+        ],
+        "venue": "Sky Deck",
+        "capacity": 200,
+        "amenities": [
+          "City View",
+          "Bar",
+          "Lounge"
+        ],
+        "type": "rooftop"
+      }
+    ],
+    "stats": {
+      "totalVenues": 25,
+      "averageCapacity": 350,
+      "bookingRate": 94
+    }
+  },
+  {
+    "category": "Tour & Travel",
+    "description": "Exciting travel packages and adventure tours for memorable experiences",
+    "featured": true,
+    "images": [
+      {
+        "src": "/assets/images/tourtravels/1.jpeg",
+        "title": "Mountain Adventure Tour",
+        "description": "Thrilling mountain trekking and camping experience",
+        "tags": [
+          "adventure",
+          "mountains",
+          "trekking",
+          "camping"
+        ],
+        "venue": "Himalayan Peaks",
+        "date": "2024-08-15",
+        "guests": 25,
+        "type": "adventure"
+      },
+      {
+        "src": "/assets/images/tourtravels/2.jpeg",
+        "title": "Beach Paradise Tour",
+        "description": "Relaxing beach vacation with water sports and luxury stays",
+        "tags": [
+          "beach",
+          "relaxation",
+          "water sports",
+          "luxury"
+        ],
+        "venue": "Goa Beaches",
+        "date": "2024-07-20",
+        "guests": 40,
+        "type": "leisure"
+      },
+      {
+        "src": "/assets/images/tourtravels/3.jpeg",
+        "title": "Cultural Heritage Tour",
+        "description": "Explore ancient monuments and cultural landmarks",
+        "tags": [
+          "culture",
+          "heritage",
+          "monuments",
+          "history"
+        ],
+        "venue": "Rajasthan Palaces",
+        "date": "2024-09-10",
+        "guests": 30,
+        "type": "cultural"
+      }
+    ],
+    "stats": {
+      "totalTours": 45,
+      "averageGroupSize": 32,
+      "satisfactionRate": 96
+    }
+  },
+  {
+    "category": "Honeymoon Packages",
+    "description": "Romantic getaways and intimate honeymoon experiences for newlyweds",
+    "featured": false,
+    "images": [
+      {
+        "src": "/assets/images/honeymoonpackages/1.jpeg",
+        "title": "Romantic Hill Station Retreat",
+        "description": "Cozy mountain resort with scenic views and romantic amenities",
+        "tags": [
+          "romantic",
+          "hills",
+          "retreat",
+          "scenic"
+        ],
+        "venue": "Mussoorie Hills Resort",
+        "date": "2024-06-25",
+        "guests": 2,
+        "type": "retreat"
+      },
+      {
+        "src": "/assets/images/honeymoonpackages/2.jpeg",
+        "title": "Tropical Island Escape",
+        "description": "Private beach villa with sunset views and luxury spa",
+        "tags": [
+          "tropical",
+          "beach",
+          "luxury",
+          "spa"
+        ],
+        "venue": "Andaman Islands",
+        "date": "2024-08-05",
+        "guests": 2,
+        "type": "beach"
+      },
+      {
+        "src": "/assets/images/honeymoonpackages/3.jpeg",
+        "title": "Royal Palace Experience",
+        "description": "Stay in converted palace with royal treatment and heritage charm",
+        "tags": [
+          "royal",
+          "palace",
+          "heritage",
+          "luxury"
+        ],
+        "venue": "Udaipur Palace Hotel",
+        "date": "2024-07-12",
+        "guests": 2,
+        "type": "heritage"
+      }
+    ],
+    "stats": {
+      "totalPackages": 30,
+      "averageDuration": 7,
+      "customerRating": 4.9
+    }
+  },
+  {
+    "category": "Educational Trips",
+    "description": "Educational and learning experiences for students and academic institutions",
+    "featured": false,
+    "images": [
+      {
+        "src": "/assets/images/educatioinialtrips/1.jpeg",
+        "title": "Science Museum Visit",
+        "description": "Interactive learning experience at premier science museums",
+        "tags": [
+          "education",
+          "science",
+          "museum",
+          "interactive"
+        ],
+        "venue": "National Science Centre",
+        "date": "2024-05-15",
+        "guests": 50,
+        "type": "academic"
+      },
+      {
+        "src": "/assets/images/educatioinialtrips/2.jpeg",
+        "title": "Historical Site Exploration",
+        "description": "Educational tour of ancient forts and historical monuments",
+        "tags": [
+          "history",
+          "monuments",
+          "education",
+          "heritage"
+        ],
+        "venue": "Red Fort & Qutub Minar",
+        "date": "2024-06-10",
+        "guests": 80,
+        "type": "historical"
+      },
+      {
+        "src": "/assets/images/educatioinialtrips/3.jpeg",
+        "title": "Nature Conservation Camp",
+        "description": "Environmental awareness program with wildlife sanctuary visit",
+        "tags": [
+          "nature",
+          "conservation",
+          "wildlife",
+          "environment"
+        ],
+        "venue": "Jim Corbett National Park",
+        "date": "2024-07-05",
+        "guests": 35,
+        "type": "environmental"
+      }
+    ],
+    "stats": {
+      "totalTrips": 60,
+      "averageStudents": 55,
+      "educationalValue": 98
+    }
+  }
+]

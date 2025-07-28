@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "title": "Wedding Planning",
+    "shortDescription": "Creating magical moments that last forever",
+    "description": "From intimate ceremonies to grand celebrations, we create magical wedding experiences tailored to your unique love story. Our comprehensive wedding planning covers every detail from venue selection to decoration, catering, photography, and entertainment.",
+    "features": [
+      "Venue Selection & Booking",
+      "Decoration & Theme Design",
+      "Catering & Menu Planning",
+      "Photography & Videography",
+      "Entertainment & Music",
+      "Guest Management"
+    ],
+    "icon": "wedding",
+    "image": "/assets/images/weddings/1.jpg",
+    "gallery": [
+      "weddings"
+    ],
+    "basePrice": "₹50,000",
+    "category": "Premium"
+  },
+  {
+    "id": 2,
+    "title": "Corporate Events",
+    "shortDescription": "Professional events that inspire success",
+    "description": "Elevate your brand with our professional corporate event planning services, from conferences to team-building activities. We ensure your corporate events reflect your company's values and achieve your business objectives.",
+    "features": [
+      "Conference & Seminar Organization",
+      "Product Launch Events",
+      "Team Building Activities",
+      "Awards & Recognition Ceremonies",
+      "Business Networking Events",
+      "Exhibition & Trade Shows"
+    ],
+    "icon": "corporate",
+    "image": "/assets/images/corporate/1.jpeg",
+    "gallery": [
+      "corporate"
+    ],
+    "basePrice": "₹25,000",
+    "category": "Business"
+  },
+  {
+    "id": 3,
+    "title": "Themed Parties",
+    "shortDescription": "Bringing your creative visions to life",
+    "description": "Transform any occasion into an extraordinary themed experience. From birthday parties to anniversary celebrations, we create immersive environments that transport your guests into a world of wonder.",
+    "features": [
+      "Custom Theme Development",
+      "Costume & Props Arrangement",
+      "Specialized Decoration",
+      "Themed Entertainment",
+      "Interactive Activities",
+      "Photo Booth Setup"
+    ],
+    "icon": "party",
+    "image": "/assets/images/themedparty/1.jpeg",
+    "gallery": [
+      "themedparty"
+    ],
+    "basePrice": "₹15,000",
+    "category": "Creative"
+  },
+  {
+    "id": 4,
+    "title": "Venue Booking",
+    "shortDescription": "Perfect venues for every occasion",
+    "description": "Discover stunning venues that complement your event perfectly. Our extensive network of premium locations ensures you find the ideal setting for your special occasion, whether intimate or grand.",
+    "features": [
+      "Premium Location Scouting",
+      "Venue Comparison & Selection",
+      "Booking & Coordination",
+      "Space Planning & Layout",
+      "Vendor Coordination",
+      "Setup & Management"
+    ],
+    "icon": "venue",
+    "image": "/assets/images/venubookiing/1.jpeg",
+    "gallery": [
+      "venubookiing"
+    ],
+    "basePrice": "₹10,000",
+    "category": "Logistics"
+  },
+  {
+    "id": 5,
+    "title": "Tour & Travel",
+    "shortDescription": "Adventures beyond imagination",
+    "description": "Create lasting memories with our curated travel and tour packages. From romantic getaways to group adventures, we design travel experiences that exceed expectations and create unforgettable moments.",
+    "features": [
+      "Custom Itinerary Planning",
+      "Accommodation Booking",
+      "Transportation Arrangement",
+      "Local Guide Services",
+      "Activity Coordination",
+      "24/7 Travel Support"
+    ],
+    "icon": "travel",
+    "image": "/assets/images/tourtravels/1.jpeg",
+    "gallery": [
+      "tourtravels"
+    ],
+    "basePrice": "₹20,000",
+    "category": "Adventure"
+  },
+  {
+    "id": 6,
+    "title": "Honeymoon Packages",
+    "shortDescription": "Romantic escapes for newlyweds",
+    "description": "Begin your married life with a perfect romantic getaway. Our specially curated honeymoon packages offer intimate settings, luxury accommodations, and memorable experiences designed for couples.",
+    "features": [
+      "Romantic Destination Selection",
+      "Luxury Accommodation",
+      "Couples Activities",
+      "Special Dinner Arrangements",
+      "Photography Services",
+      "Personalized Touches"
+    ],
+    "icon": "honeymoon",
+    "image": "/assets/images/honeymoonpackages/1.jpeg",
+    "gallery": [
+      "honeymoonpackages"
+    ],
+    "basePrice": "₹35,000",
+    "category": "Romance"
+  }
+]
