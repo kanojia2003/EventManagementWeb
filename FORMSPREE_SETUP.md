@@ -11,7 +11,7 @@ The contact form is currently working in demo mode (simulated submission). To re
 ## Step 2: Create a New Form
 1. Click "New Form" in your Formspree dashboard
 2. Name your form: "SS Benchmark Events Contact Form"
-3. Add your company email: `info@ssbenchmarkevents.com` (or your actual email)
+3. Add your company email: `ssbenchmarkevents@gmail.com` (or your actual email)
 4. Copy the form ID (it looks like: `xpznvqko` or similar 8-character code)
 
 ## Step 3: Update the Contact Component

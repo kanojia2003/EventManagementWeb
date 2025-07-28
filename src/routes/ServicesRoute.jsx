@@ -87,7 +87,7 @@ const ServicesRoute = () => (
                 <div className="text-sm">Events Managed</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gold">15+</div>
+                <div className="text-2xl font-bold text-gold">5+</div>
                 <div className="text-sm">Years Experience</div>
               </div>
             </div>

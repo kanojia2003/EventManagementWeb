@@ -162,7 +162,7 @@ const Footer = () => {
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
             </motion.svg>
             <motion.a 
-              href="mailto:info@ssbenchmarkevents.com" 
+              href="mailto:ssbenchmarkevents@gmail.com" 
               whileHover={{ scale: 1.05, color: "#D4AF37" }}
               transition={{ type: "spring", stiffness: 300 }}
             >

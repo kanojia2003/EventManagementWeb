@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeInUp, scaleIn, staggerContainer } from '../../framer';
 import { Link } from 'react-router-dom';
@@ -210,18 +210,76 @@ const QuoteModal = ({ service, isOpen, onClose }) => {
     budget: '',
     message: ''
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    alert(`Quote request submitted for ${service?.title}!`);
-    onClose();
-    setFormData({ name: '', email: '', phone: '', date: '', guests: '', budget: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      // Use the same Formspree endpoint as the contact form
+      const response = await fetch('https://formspree.io/f/xnnzvqqo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          eventDate: formData.date,
+          guestCount: formData.guests,
+          budget: formData.budget,
+          message: formData.message,
+          serviceRequested: service?.title,
+          basePrice: service?.basePrice,
+          formType: 'Quote Request',
+          subject: `Quote Request for ${service?.title} from ${formData.name}`,
+          _replyto: formData.email
+        })
+      });
+
+      if (response.ok) {
+        setIsSubmitting(false);
+        setSubmitSuccess(true);
+        
+        // Reset form and close modal after 3 seconds
+        setTimeout(() => {
+          setFormData({ name: '', email: '', phone: '', date: '', guests: '', budget: '', message: '' });
+          setSubmitSuccess(false);
+          onClose();
+        }, 3000);
+      } else {
+        throw new Error('Failed to submit quote request');
+      }
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmitError('Failed to send quote request. Please try again or contact us directly.');
+      console.error('Quote submission error:', error);
+    }
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    // Clear any previous errors when user starts typing
+    if (submitError) {
+      setSubmitError('');
+    }
   };
+
+  // Reset form state when modal opens/closes
+  useEffect(() => {
+    if (isOpen) {
+      setFormData({ name: '', email: '', phone: '', date: '', guests: '', budget: '', message: '' });
+      setSubmitSuccess(false);
+      setSubmitError('');
+      setIsSubmitting(false);
+    }
+  }, [isOpen]);
 
   return (
     <AnimatePresence>
@@ -259,7 +317,48 @@ const QuoteModal = ({ service, isOpen, onClose }) => {
               <p className="text-lg font-bold text-gold mt-2">Starting from {service.basePrice}</p>
             </div>
 
+            {/* Success Message */}
+            {submitSuccess && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg"
+              >
+                <div className="flex items-center text-green-800">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="font-semibold">Quote Request Sent!</span>
+                </div>
+                <p className="text-green-700 text-sm mt-1">
+                  We'll send you a detailed quote within 2 hours. Check your email for confirmation.
+                </p>
+              </motion.div>
+            )}
+
+            {/* Error Message */}
+            {submitError && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg"
+              >
+                <div className="flex items-center text-red-800">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-red-700 text-sm">{submitError}</span>
+                </div>
+              </motion.div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Hidden fields for better email formatting */}
+              <input type="hidden" name="_subject" value={`Quote Request for ${service?.title} from ${formData.name}`} />
+              <input type="hidden" name="_replyto" value={formData.email} />
+              <input type="hidden" name="serviceRequested" value={service?.title} />
+              <input type="hidden" name="basePrice" value={service?.basePrice} />
+              
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="text"
@@ -341,11 +440,33 @@ const QuoteModal = ({ service, isOpen, onClose }) => {
 
               <motion.button
                 type="submit"
-                className="w-full py-3 bg-gradient-to-r from-gold to-yellow-500 text-white font-bold rounded-lg hover:from-yellow-500 hover:to-gold transition-all duration-300"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                disabled={isSubmitting || submitSuccess}
+                className={`w-full py-3 font-bold rounded-lg transition-all duration-300 ${
+                  isSubmitting || submitSuccess
+                    ? 'bg-gray-400 cursor-not-allowed'
+                    : 'bg-gradient-to-r from-gold to-yellow-500 text-white hover:from-yellow-500 hover:to-gold'
+                }`}
+                whileHover={!isSubmitting && !submitSuccess ? { scale: 1.02 } : {}}
+                whileTap={!isSubmitting && !submitSuccess ? { scale: 0.98 } : {}}
               >
-                Submit Quote Request
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center">
+                    <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending Quote Request...
+                  </span>
+                ) : submitSuccess ? (
+                  <span className="flex items-center justify-center text-green-600">
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Quote Request Sent!
+                  </span>
+                ) : (
+                  'Submit Quote Request'
+                )}
               </motion.button>
             </form>
           </motion.div>

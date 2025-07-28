@@ -79,7 +79,7 @@ const TestimonialsRoute = () => (
           >
             <div className="flex items-center space-x-6 text-gray-300">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gold">1000+</div>
+                <div className="text-2xl font-bold text-gold">500+</div>
                 <div className="text-sm">Happy Clients</div>
               </div>
               <div className="text-center">

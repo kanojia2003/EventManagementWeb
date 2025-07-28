@@ -18,6 +18,41 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
+  // Email handler function
+  const handleEmailClick = (e) => {
+    const email = 'ssbenchmarkevents@gmail.com';
+    const subject = 'Event Inquiry from Website';
+    const body = `Hello SS Benchmark Events,
+
+I am interested in your event planning services and would like to discuss my upcoming event.
+
+Please contact me at your earliest convenience.
+
+Thank you!`;
+
+    // Try multiple approaches for email opening
+    const encodedBody = encodeURIComponent(body);
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodedBody}`;
+    
+    // Primary method: Use mailto link
+    try {
+      window.location.href = mailtoLink;
+    } catch (error) {
+      // Fallback 1: Open in new window
+      try {
+        window.open(mailtoLink, '_blank');
+      } catch (error2) {
+        // Fallback 2: Copy email to clipboard and show alert
+        navigator.clipboard.writeText(email).then(() => {
+          alert(`Email address copied to clipboard: ${email}\n\nPlease paste it in your email client.`);
+        }).catch(() => {
+          // Final fallback: Show email in alert
+          alert(`Please email us at: ${email}\n\nSubject: ${subject}`);
+        });
+      }
+    }
+  };
+
   const eventTypes = [
     "Wedding & Reception",
     "Corporate Event",
@@ -46,7 +81,7 @@ const Contact = () => {
     {
       icon: "✉️",
       title: "Email Us",
-      details: ["info@ssbenchmarkevents.com", "events@ssbenchmarkevents.com", "Quick Response Guaranteed"],
+      details: ["ssbenchmarkevents@gmail.com",  "Quick Response Guaranteed"],
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -107,30 +142,9 @@ const Contact = () => {
     setIsSubmitting(true);
     setErrors({});
 
-    // For now, we'll simulate a successful submission until Formspree is set up
-    // Replace this with actual Formspree integration once you have the form ID
-    
-    const FORMSPREE_ID = 'https://formspree.io/f/xnnzvqqo'; // Replace with your actual Formspree form ID
-
-    if (FORMSPREE_ID === 'https://formspree.io/f/xnnzvqqo') {
-      // Simulate successful submission for demo purposes
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setSubmitSuccess(true);
-        setFormData({
-          name: "", email: "", phone: "", eventType: "", 
-          eventDate: "", guestCount: "", budget: "", message: ""
-        });
-        
-        // Reset success message after 8 seconds
-        setTimeout(() => setSubmitSuccess(false), 8000);
-      }, 2000);
-      return;
-    }
-
     try {
-      // Actual Formspree submission (when form ID is configured)
-      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      // Use the actual Formspree endpoint
+      const response = await fetch('https://formspree.io/f/xnnzvqqo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -144,6 +158,7 @@ const Contact = () => {
           guestCount: formData.guestCount,
           budget: formData.budget,
           message: formData.message,
+          formType: 'General Contact',
           subject: `New Event Inquiry from ${formData.name} - ${formData.eventType}`,
           _replyto: formData.email
         })
@@ -191,22 +206,76 @@ const Contact = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {contactInfo.map((info, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-gold/20 text-center hover:shadow-xl transition-all duration-300"
-                variants={scaleIn}
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <div className="text-4xl mb-4">{info.icon}</div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{info.title}</h3>
-                {info.details.map((detail, idx) => (
-                  <p key={idx} className={`text-gray-600 ${idx === 0 ? 'font-semibold text-gold' : ''}`}>
-                    {detail}
-                  </p>
-                ))}
-              </motion.div>
-            ))}
+            {contactInfo.map((info, index) => {
+              if (info.title === "Email Us") {
+                return (
+                  <a
+                    key={index}
+                    href="mailto:ssbenchmarkevents@gmail.com?subject=Event%20Inquiry%20from%20Website&body=Hello%20SS%20Benchmark%20Events%2C%0A%0AI%20am%20interested%20in%20your%20event%20planning%20services%20and%20would%20like%20to%20discuss%20my%20upcoming%20event.%0A%0APlease%20contact%20me%20at%20your%20earliest%20convenience.%0A%0AThank%20you!"
+                    className="block"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <motion.div
+                      className={
+                        `bg-white rounded-2xl p-6 shadow-lg border border-gold/20 text-center hover:shadow-xl transition-all duration-300 cursor-pointer`
+                      }
+                      variants={scaleIn}
+                      whileHover={{ y: -10, scale: 1.02 }}
+                    >
+                      <div className="text-4xl mb-4">{info.icon}</div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-3">{info.title}</h3>
+                      {info.details.map((detail, idx) => (
+                        <p key={idx} className={`text-gray-600 ${idx === 0 ? 'font-semibold text-gold' : ''}`}>
+                          {detail}
+                        </p>
+                      ))}
+                    </motion.div>
+                  </a>
+                );
+              } else if (info.title === "Call Us") {
+                return (
+                  <a
+                    key={index}
+                    href="tel:+918004550986"
+                    className="block"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <motion.div
+                      className={
+                        `bg-white rounded-2xl p-6 shadow-lg border border-gold/20 text-center hover:shadow-xl transition-all duration-300 cursor-pointer`
+                      }
+                      variants={scaleIn}
+                      whileHover={{ y: -10, scale: 1.02 }}
+                    >
+                      <div className="text-4xl mb-4">{info.icon}</div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-3">{info.title}</h3>
+                      {info.details.map((detail, idx) => (
+                        <p key={idx} className={`text-gray-600 ${idx === 0 ? 'font-semibold text-gold' : ''}`}>
+                          {detail}
+                        </p>
+                      ))}
+                    </motion.div>
+                  </a>
+                );
+              } else {
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-2xl p-6 shadow-lg border border-gold/20 text-center hover:shadow-xl transition-all duration-300"
+                    variants={scaleIn}
+                    whileHover={{ y: -10, scale: 1.02 }}
+                  >
+                    <div className="text-4xl mb-4">{info.icon}</div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">{info.title}</h3>
+                    {info.details.map((detail, idx) => (
+                      <p key={idx} className={`text-gray-600 ${idx === 0 ? 'font-semibold text-gold' : ''}`}>
+                        {detail}
+                      </p>
+                    ))}
+                  </motion.div>
+                );
+              }
+            })}
           </div>
         </div>
       </motion.section>
@@ -524,17 +593,17 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+919876543210"
+                href="tel:+918004550986"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gold to-yellow-500 text-white font-bold rounded-full hover:from-yellow-500 hover:to-gold transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 📞 Call Now: +91 8004550986
               </a>
-              <a
-                href="mailto:info@ssbenchmarkevents.com"
-                className="inline-flex items-center px-8 py-4 bg-white text-gold font-bold rounded-full border-2 border-gold hover:bg-gold hover:text-white transition-all duration-300 transform hover:scale-105"
-              >
-                ✉️ Email Us Directly
-              </a>
+             <a
+  href="mailto:ssbenchmarkevents@gmail.com?subject=Event Inquiry from Website&body=Hello SS Benchmark Events,%0D%0A%0D%0AI am interested in your event planning services and would like to discuss my upcoming event.%0D%0A%0D%0APlease contact me at your earliest convenience.%0D%0A%0D%0AThank you!"
+  className="inline-flex items-center px-8 py-4 bg-white text-gold font-bold rounded-full border-2 border-gold hover:bg-gold hover:text-white transition-all duration-300 transform hover:scale-105 cursor-pointer"
+>
+  ✉️ Email Us Directly
+</a>
             </div>
           </motion.div>
         </div>

@@ -116,11 +116,11 @@ const GalleryRoute = () => {
                   <div className="text-sm">Events Captured</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gold">50K+</div>
+                  <div className="text-2xl font-bold text-gold">10K+</div>
                   <div className="text-sm">Happy Memories</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gold">99%</div>
+                  <div className="text-2xl font-bold text-gold">98%</div>
                   <div className="text-sm">Client Satisfaction</div>
                 </div>
               </div>

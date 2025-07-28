@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Sanjiv Mehra",
+    "name": "Akash Tiwari",
     "text": "SS Benchmark Events made our wedding unforgettable! From the initial planning to the final execution, every detail was handled with utmost care. The team's creativity and professionalism exceeded our expectations.",
     "rating": 5,
     "event": "Wedding Celebration",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "name": "Rajiv Verma",
+    "name": "Surabh Singh",
     "text": "Professional and creative team. Our corporate event was a huge success. The attention to detail and seamless coordination made our annual summit memorable for all attendees.",
     "rating": 5,
     "event": "Corporate Annual Summit",
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "name": "Amit Sharma",
+    "name": "Priyanshu Pandey",
     "text": "SS Benchmark Events made our wedding truly magical. Every detail was perfect! The decoration, catering, and entertainment were beyond our dreams. Highly recommended!",
     "rating": 5,
     "event": "Traditional Wedding",
@@ -34,7 +34,7 @@
   },
   {
     "id": 4,
-    "name": "Priya Verma",
+    "name": "Neeraj Kanojia",
     "text": "Our corporate event was seamless and impressive. The team is very professional and handled all logistics perfectly. Our clients were thoroughly impressed with the arrangements.",
     "rating": 4,
     "event": "Product Launch Event",
