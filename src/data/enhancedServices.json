@@ -17,7 +17,7 @@
     "gallery": [
       "weddings"
     ],
-    "basePrice": "₹50,000",
+    "basePrice": "₹1,50,000",
     "category": "Premium"
   },
   {
@@ -38,7 +38,7 @@
     "gallery": [
       "corporate"
     ],
-    "basePrice": "₹25,000",
+    "basePrice": "₹30,000",
     "category": "Business"
   },
   {
@@ -59,7 +59,7 @@
     "gallery": [
       "themedparty"
     ],
-    "basePrice": "₹15,000",
+    "basePrice": "₹30,000",
     "category": "Creative"
   },
   {
@@ -80,7 +80,7 @@
     "gallery": [
       "venubookiing"
     ],
-    "basePrice": "₹10,000",
+    "basePrice": "₹50,000",
     "category": "Logistics"
   },
   {
@@ -101,7 +101,7 @@
     "gallery": [
       "tourtravels"
     ],
-    "basePrice": "₹20,000",
+    "basePrice": "₹50,000",
     "category": "Adventure"
   },
   {
@@ -122,7 +122,7 @@
     "gallery": [
       "honeymoonpackages"
     ],
-    "basePrice": "₹35,000",
+    "basePrice": "₹1,00,000",
     "category": "Romance"
   }
 ]
